@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تقديم تقرير MDT</title>
+  <link rel="stylesheet" href="styles.css" />
+
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDTh6IiiRi-d6Zo9ejZF9u--RFfDxHLxko",
+    authDomain: "mdt-system.firebaseapp.com",
+    projectId: "mdt-system",
+    storageBucket: "mdt-system.firebasestorage.app",
+    messagingSenderId: "104997657660",
+    appId: "1:104997657660:web:9a0989b7dd45dee7047739"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+  
+
+
+</head>
+<body>
+  <div class="container">
+    <h1>نموذج تقديم تقرير MDT</h1>
+
+    <div class="section">
+      <label>اسم العسكري:</label>
+      <input type="text" id="reporterName" required />
+    </div>
+
+    <div class="section">
+      <label>حالة المهمة:</label>
+      <select id="missionStatus">
+        <option>جارية</option>
+        <option>ناجحة</option>
+        <option>فاشلة</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <label>نوع الحالة:</label>
+      <select id="caseType" onchange="toggleCustomType()">
+        <option>جنائية</option>
+        <option>مرورية</option>
+        <option>آخر</option>
+      </select>
+      <input type="text" id="customCaseType" placeholder="أدخل نوع الحالة" style="display: none; margin-top: 10px;" />
+    </div>
+
+
+
+
+    <div class="section">
+      <label>المخالفة:</label>
+      <select id="violations" multiple style="height: 100px;">
+
+
+<option value="محاولة اختطاف : 25شهر : 500$">محاولة اختطاف : 25شهر : 500$</option>
+<option value="اختطاف : 40شهر : 700$">اختطاف : 40شهر : 700$</option>
+<option value="اختطاف رجل دولة : 70شهر : 1500$">اختطاف رجل دولة : 70شهر : 1500$</option>
+<option value="قتال الشوارع : 40شهر : 750$">قتال الشوارع : 40شهر : 750$</option>
+<option value="محاولة تهريب مجرم : 40شهر : 750$">محاولة تهريب مجرم : 40شهر : 750$</option>
+<option value="محاولة تهريب مجرم : 70شهر : 1500$">محاولة تهريب مجرم : 70شهر : 1500$</option>
+<option value="الهروب من السجن : 50شهر : 850$">الهروب من السجن : 50شهر : 850$</option>
+<option value="حمل بطاقة غير عائدة له : 30شهر : 400$">حمل بطاقة غير عائدة له : 30شهر : 400$</option>
+<option value="سرقة المواطنين : 30شهر : 400$">سرقة المواطنين : 30شهر : 400$</option>
+<option value="سرقة سيارة : 20شهر : 100$">سرقة سيارة : 20شهر : 100$</option>
+<option value="سرقة بقالة : 30شهر : 1000$">سرقة بقالة : 30شهر : 1000$</option>
+<option value="سرقة الصراف الآلي : 45شهر : 2500$">سرقة الصراف الآلي : 45شهر : 2500$</option>
+<option value="سرقة منزل : 50شهر : 5000$">سرقة منزل : 50شهر : 5000$</option>
+<option value="سرقة بوب كات : 85شهر : 10000$">سرقة بوب كات : 85شهر : 10000$</option>
+<option value="سرقة بنك فليكا : 100شهر : 15000$">سرقة بنك فليكا : 100شهر : 15000$</option>
+
+        <option value=" الهروب من الشرطة : 25شهر : 300$"> الهروب من الشرطة : 25شهر : 300$</option>
+        <option value="التسوّول : 20شهر : 100$">التسوّول : 20شهر : 100$</option>
+        <option value="ذوق عام : 20شهر : 50$">ذوق عام : 20شهر : 50$</option>
+        <option value="تجارة بالأسلحة من الدرجة الأولى : 60شهر : 3000$ ">تجارة بالأسلحة من الدرجة الأولى : 60شهر : 3000$</option>
+‏ <option value="تجارة بالأسلحة من الدرجة الثانية : 90شهر : 5000$ ">تجارة بالأسلحة من الدرجة الثانية : 60شهر : 5000$</option>
+‏ <option value="تجارة بالأسلحة من الدرجة الثالثة : 160شهر : 10000$ ">تجارة بالأسلحة من الدرجة الثالثة : 160شهر : 10000$</option>
+
+‏ <option value="حيازة سلاح غير مرخّص : 45شهر : 100$ ">‎حيازة سلاح غير مرخّص : 45شهر : $100</option>
+
+
+
+
+
+      </select>
+      <small>اضغط Ctrl (أو Cmd في Mac) لتحديد أكثر من مخالفة</small>
+    </div>
+    
+    
+
+    <div class="section">
+      <label>اسم المجرم:</label>
+      <input type="text" id="personName" required />
+    </div>
+
+    <div class="section">
+      <label>صورة المجرم:</label>
+      <input type="file" id="personImage" accept="image/*" />
+    </div>
+
+    <div class="section">
+      <label>معلومات إضافية:</label>
+      <textarea id="additionalInfo" rows="4" placeholder="تفاصيل إضافية..."></textarea>
+    </div>
+
+    <button onclick="submitReport()">إرسال التقرير</button>
+    <div id="confirmation" class="confirmation"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+<footer class="footer">
+  <p>Developed by Noureldin</p>
+</footer>
+  
+</body>
+</html>
